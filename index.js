@@ -17,14 +17,21 @@ function addTwo() {
 
 
 function addScore(num) {
-    score += num;
-    rootElement.render(<App />);
-    console.log(score); 
+
+    if(wicket < 10){
+        score += num;
+        rootElement.render(<App />);
+        console.log(score); 
+    }
 }
 
 function addWicket() {
-    wicket += 1;
-    rootElement.render(<App />);
+
+    if(wicket < 10){
+        wicket += 1;
+        rootElement.render(<App />);
+    }
+  
 }
 
 const App = () => (
