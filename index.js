@@ -22,6 +22,11 @@ function addScore(num) {
     console.log(score); 
 }
 
+function addWicket() {
+    wicket += 1;
+    rootElement.render(<App />);
+}
+
 const App = () => (
     <>
     <h1>SCORE KEEPER</h1>
@@ -29,11 +34,11 @@ const App = () => (
     <div>
          <button onClick = {() => addScore(1)}>1</button>
          <button onClick = {() => addScore(2)}>2</button>
-         <button onClick= {() => addScore(3)}>3</button>
-         <button onClick= {() => addScore(4)}>4</button>
-         <button onClick= {() => addScore(5)}>5</button>
-         <button onClick= {() => addScore(6)}>6</button>
-         <button>wicket</button>
+         <button onClick = {() => addScore(3)}>3</button>
+         <button onClick = {() => addScore(4)}>4</button>
+         <button onClick = {() => addScore(5)}>5</button>
+         <button onClick = {() => addScore(6)}>6</button>
+         <button onClick = {addWicket}>wicket</button>
     </div>
     </>
 )
