@@ -46,6 +46,18 @@ const Result = () => (
   </div>
 )
 
+function handleSubmit(event) {
+  event.preventDefault();
+}
+
+const Form = () => (
+  <form onSubmit={handleSubmit}>
+    <input />
+    <input />
+    <button>Submit</button>
+  </form>
+)
+
 const App = () => (
   <>
     <h1>SCORE KEEPER</h1>
@@ -53,7 +65,9 @@ const App = () => (
       SCORE: {score}/{wicket}
     </h2>
     <ScoreButtons />
-    <Result />
+    <br />
+    <Form />
+    <hr />
   </>
 );
 
