@@ -49,9 +49,15 @@ function handleSubmit(event) {
     score += hit;
   }
 
+  // ballWiseResult.unshift(
+  //   <span>{hit}{","}{inputRef.current.value}</span>
+  // );
+
   ballWiseResult.unshift(
-    <span>{hit}{","}{inputRef.current.value}</span>
+     <span>{`${hit}, ${inputRef.current.value}`}</span>
   );
+
+    
   // console.log(ballWiseResult);
   console.log(inputRef.current.value);
 
