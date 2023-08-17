@@ -8,7 +8,6 @@ let hit = 0;
 function addScore(num) {
   hit = num;
   rootElement.render(<App />);
-  console.log(hit);
 }
 
 function addWicket() {
@@ -42,6 +41,11 @@ const Result = () => (
 
 function handleSubmit(event) {
   event.preventDefault();
+  
+  ballWiseResult.unshift(hit);
+  console.log(ballWiseResult);
+
+  rootElement.render(<App />);
 }
 
 const Form = () => (
@@ -62,6 +66,10 @@ const App = () => (
     <br />
     <Form />
     <hr />
+
+    {ballWiseResult.map((res, index) => (
+      <p key={index}>{res}</p>
+    ))}
   </>
 );
 
