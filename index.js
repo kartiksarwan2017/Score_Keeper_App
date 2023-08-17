@@ -57,11 +57,13 @@ function handleSubmit(event) {
      <span>{`${hit}, ${inputRef.current.value}`}</span>
   );
 
+  hit = 0;
+  inputRef.current.value = "";
     
   // console.log(ballWiseResult);
   console.log(inputRef.current.value);
 
-  rootElement.render(<App />);
+  // rootElement.render(<App />);
 }
 
 const Form = () => (
